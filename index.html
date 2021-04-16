@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Calculator</title>
+        <style></style>
+        <script> 
+            
+            function sumColor(color) {
+                
+            document.forms[0].name1.style.background = color;
+                
+            }
+            function sumColor1(color) {
+                
+            document.forms[0].name2.style.background = color;
+                
+            }
+            
+            //subtract numbers
+            
+             function subColor(color) {
+                
+            document.forms[1].subname1.style.background = color;
+                
+            }
+            function subColor1(color) {
+                
+            document.forms[1].subname2.style.background = color;
+                
+            }
+            
+            //multtiply numbers
+            
+             function mulColor(color) {
+                
+            document.forms[2].mulname1.style.background = color;
+                
+            }
+            function mulColor1(color) {
+                
+            document.forms[2].mulname2.style.background = color;
+                
+            }
+            
+            //divide numbers
+            
+             function divColor(color) {
+                
+            document.forms[3].divname1.style.background = color;
+                
+            }
+            function divColor1(color) {
+                
+            document.forms[3].divname2.style.background = color;
+                
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+
+    <h1> <u> Calculator </u></h1>
+    <h3> Add Numbers:</h3>
+
+    <form id = "form0"> 
+        
+        
+    <input id = "add-num-1" name = "name1" onchange = "sumColor('yellow')">
+        +
+    <input id = "add-num-2" name = "name2" onchange = "sumColor1('yellow') ">
+        
+        
+    </form>
+    
+    <p id = "sum" ></p>
+    
+    
+    <br>
+    
+    <!---Subtract Numbers----->
+    
+    <h3> Subtract Numbers:</h3>
+
+    <form id = "form1"> 
+        
+        
+    <input id = "sub-num-1" name = "subname1" onchange = "subColor('yellow')">
+        -
+    <input id = "sub-num-2" name = "subname2" onchange = "subColor1('yellow')">
+        
+        
+    </form>
+    
+    <p id = "sub" ></p>
+    
+    <br>
+    
+    <!---Multiply Numbers----->
+    
+    <h3> Multiply Numbers:</h3>
+
+    <form id = "form2"> 
+        
+        
+    <input id = "mul-num-1" name = "mulname1" onchange = "mulColor('yellow')" >
+        -
+    <input id = "mul-num-2" name = "mulname2" onchange = "mulColor1('yellow')">
+        
+        
+    </form>
+    
+    <p id = "multiply" ></p>
+    
+    <!---Multiply Numbers----->
+    
+    <h3> Divide Numbers:</h3>
+
+    <form id = "form2"> 
+        
+        
+    <input id = "div-num-1" name = "divname1" onchange = "divColor('yellow')" >
+        -
+    <input id = "div-num-2" name = "divname2" onchange = "divColor1('yellow')">
+        
+        
+    </form>
+    
+    <p id = "divide" ></p>
+    
+
+    <script> 
+    
+        var numOne = document.getElementById("add-num-1");
+        var numTwo = document.getElementById("add-num-2");
+        var addSum = document.getElementById("sum");
+        
+        numOne.addEventListener("input", add);
+        numTwo.addEventListener("input", add);
+        
+        function add() {
+            
+            var one = parseFloat(numOne.value) || 0;
+            var two = parseFloat(numTwo.value) || 0;
+            addSum.innerHTML = one+two;
+            
+        }
+        
+        //multiple numbers
+        
+        var Num1 = document.getElementById("mul-num-1");
+        var Num2 = document.getElementById("mul-num-2");
+        var addMul = document.getElementById("multiply");
+        
+        Num1.addEventListener("input", mul);
+        Num2.addEventListener("input", mul);
+        
+        function mul() {
+            
+            var one = parseFloat(Num1.value) || 0;
+            var two = parseFloat(Num2.value) || 0;
+            addMul.innerHTML = one*two;
+            
+        }
+        //subtract numbers
+        
+        var num1 = document.getElementById("sub-num-1");
+        var num2 = document.getElementById("sub-num-2");
+        var addSub = document.getElementById("sub");
+        
+        num1.addEventListener("input", sub);
+        num2.addEventListener("input", sub);
+        
+        function sub() {
+            
+            var one = parseFloat(num1.value) || 0;
+            var two = parseFloat(num2.value) || 0;
+            addSub.innerHTML = one-two;
+            
+        }
+        
+         //divide numbers
+        
+        var NUm1 = document.getElementById("div-num-1");
+        var NUm2 = document.getElementById("div-num-2");
+        var addDiv = document.getElementById("divide");
+        
+        NUm1.addEventListener("input", div);
+        NUm2.addEventListener("input", div);
+        
+        function div() {
+            
+            var one = parseFloat(NUm1.value) || 0;
+            var two = parseFloat(NUm2.value) || 0;
+            addDiv.innerHTML = one/two;
+            
+        }
+        
+    </script>
+
+    </body>
+</html>
